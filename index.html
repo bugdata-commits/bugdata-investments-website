@@ -4,730 +4,750 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bugdata Investments — AI Automation, SEO & Digital Growth for Zimbabwe</title>
-<meta name="description" content="Bugdata Investments bridges the gap between ambition and the 21st-century economy. AI automation, SEO, website hosting, and information security for Zimbabwean businesses.">
+<meta name="description" content="Bugdata Investments bridges the gap between ambition and the 21st-century economy. AI automation, SEO, hosting, information security, a stationery shop and a growth blog — built for Zimbabwean SMEs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --color-primary: #0F172A;
-    --color-on-primary: #FFFFFF;
-    --color-secondary: #1E3A8A;
-    --color-on-secondary: #FFFFFF;
-    --color-accent: #A16207;
-    --color-on-accent: #FFFFFF;
-    --color-background: #F8FAFC;
-    --color-foreground: #020617;
-    --color-card: #FFFFFF;
-    --color-card-foreground: #020617;
-    --color-muted: #E8ECF1;
-    --color-muted-foreground: #475569;
-    --color-border: #E2E8F0;
-    --color-destructive: #DC2626;
-    --color-ring: #0F172A;
-
-    --space-1: 0.25rem;
-    --space-2: 0.5rem;
-    --space-3: 0.75rem;
-    --space-4: 1rem;
-    --space-6: 1.5rem;
-    --space-8: 2rem;
-    --space-12: 3rem;
-    --space-16: 4rem;
-    --space-24: 6rem;
-    --space-32: 8rem;
-
-    --radius: 6px;
-    --shadow-sm: 0 1px 2px rgba(2,6,23,0.04);
-    --shadow: 0 4px 16px rgba(2,6,23,0.06);
-    --shadow-lg: 0 12px 40px rgba(2,6,23,0.10);
-    --transition: 150ms ease;
+  :root{
+    --ink:#EAF3F1;
+    --ink-dim:#9FB4B1;
+    --ink-faint:#6E827F;
+    --bg:#081211;
+    --bg-1:#0C1A19;
+    --surface:#102422;
+    --surface-2:#14302C;
+    --line:#1E3A36;
+    --mint:#3EEBC4;
+    --mint-dim:#22615A;
+    --violet:#9B7BFF;
+    --amber:#F0A63A;
+    --flag-yellow:#FFD200;
+    --flag-red:#DE2010;
+    --flag-green:#006400;
+    --radius-hex: 14px;
+    --maxw: 1180px;
   }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif;
-    background: var(--color-background);
-    color: var(--color-foreground);
-    line-height: 1.5;
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
   }
-
-  a { color: inherit; text-decoration: none; }
-  img { max-width: 100%; height: auto; display: block; }
-  button { font-family: inherit; cursor: pointer; border: none; }
-
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-6);
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    line-height:1.15;
+    margin:0 0 .5em;
+    letter-spacing:-0.01em;
   }
-
-  /* Header */
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(248,250,252,0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--color-border);
-  }
-  .site-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: var(--space-4);
-    padding-bottom: var(--space-4);
-  }
-  .brand {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    font-weight: 700;
-    color: var(--color-primary);
-    letter-spacing: -0.01em;
-  }
-  .brand-logo {
-    width: 32px; height: 32px;
-    border-radius: var(--radius);
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-    color: white;
-    display: grid; place-items: center;
-    font-weight: 700; font-size: 14px;
-  }
-  .nav { display: flex; align-items: center; gap: var(--space-8); }
-  .nav-links { display: none; gap: var(--space-8); list-style: none; }
-  .nav-links a {
-    color: var(--color-muted-foreground);
-    font-weight: 500;
-    font-size: 14px;
-    transition: color var(--transition);
-  }
-  .nav-links a:hover, .nav-links a:focus { color: var(--color-primary); outline: none; }
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
-    padding: 12px 18px;
-    border-radius: var(--radius);
-    font-weight: 600; font-size: 14px;
-    transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
-    cursor: pointer;
-  }
-  .btn-primary {
-    background: var(--color-accent);
-    color: var(--color-on-accent);
-    box-shadow: var(--shadow-sm);
-  }
-  .btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow); filter: brightness(0.95); }
-  .btn-secondary {
-    background: transparent;
-    color: var(--color-primary);
-    border: 1px solid var(--color-border);
-  }
-  .btn-secondary:hover { background: var(--color-muted); }
-  .btn-ghost { background: transparent; color: var(--color-on-primary); border: 1px solid rgba(255,255,255,0.24); }
-  .btn-ghost:hover { background: rgba(255,255,255,0.12); }
-  .btn-lg { padding: 16px 24px; font-size: 16px; border-radius: 8px; }
-  @media (min-width: 768px) { .nav-links { display: flex; } }
-
-  /* Hero */
-  .hero {
-    position: relative;
-    background: linear-gradient(180deg, var(--color-primary) 0%, #0b1224 100%);
-    color: var(--color-on-primary);
-    padding: var(--space-32) 0 var(--space-24);
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0) 0 0 / 32px 32px;
-    opacity: 0.35;
-    pointer-events: none;
-  }
-  .hero-inner { position: relative; }
-  .hero h1 {
-    font-size: clamp(32px, 5vw, 56px);
-    font-weight: 700;
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    max-width: 900px;
-  }
-  .hero p.lead {
-    margin-top: var(--space-6);
-    font-size: clamp(16px, 2vw, 20px);
-    color: rgba(255,255,255,0.78);
-    max-width: 720px;
-    line-height: 1.55;
-  }
-  .hero-ctas {
-    margin-top: var(--space-8);
-    display: flex; flex-wrap: wrap; gap: var(--space-4);
-  }
-  .stats-row {
-    margin-top: var(--space-16);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
-  }
-  @media (min-width: 768px) {
-    .stats-row { grid-template-columns: repeat(4, 1fr); }
-  }
-  .stat {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 8px;
-    padding: var(--space-6);
-    backdrop-filter: blur(6px);
-  }
-  .stat-value {
-    font-size: 28px; font-weight: 700; color: var(--color-on-accent);
-  }
-  .stat-label { font-size: 13px; color: rgba(255,255,255,0.72); margin-top: 4px; }
-
-  /* Section spacing */
-  .section { padding: var(--space-24) 0; }
-  .section-header {
-    max-width: 760px;
-    margin-bottom: var(--space-12);
-  }
-  .section-header h2 {
-    font-size: clamp(24px, 3vw, 36px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.15;
-    color: var(--color-primary);
-  }
-  .section-header p {
-    margin-top: var(--space-4);
-    color: var(--color-muted-foreground);
-    font-size: 17px;
-  }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: var(--space-2);
-    font-weight: 600; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: var(--space-3);
-  }
-  .eyebrow::before {
-    content: '';
-    width: 18px; height: 2px; background: var(--color-accent); border-radius: 2px;
-  }
-
-  /* Cards */
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-  @media (min-width: 768px) { .cards { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) { .cards { grid-template-columns: repeat(4, 1fr); } }
-  .card {
-    background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    padding: var(--space-8);
-    transition: transform var(--transition), box-shadow var(--transition);
-  }
-  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-  .card-icon {
-    width: 40px; height: 40px; border-radius: 8px;
-    display: grid; place-items: center;
-    background: var(--color-muted);
-    color: var(--color-primary);
-    font-weight: 700; font-size: 18px;
-  }
-  .card h3 {
-    margin-top: var(--space-5);
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-card-foreground);
-  }
-  .card p {
-    margin-top: var(--space-3);
-    color: var(--color-muted-foreground);
-    font-size: 15px;
-    line-height: 1.6;
-  }
-  .card ul {
-    margin-top: var(--space-3);
-    padding-left: var(--space-5);
-    color: var(--color-muted-foreground);
-    font-size: 14px;
-  }
-  .card li + li { margin-top: 6px; }
-
-  /* Steps */
-  .steps {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-  @media (min-width: 768px) { .steps { grid-template-columns: repeat(3, 1fr); } }
-  .step {
-    background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    padding: var(--space-8);
-  }
-  .step-num {
-    font-weight: 700; font-size: 13px; letter-spacing: 0.1em;
-    color: var(--color-accent);
-  }
-  .step h3 {
-    margin-top: var(--space-3);
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-card-foreground);
-  }
-  .step p { margin-top: var(--space-3); color: var(--color-muted-foreground); font-size: 15px; }
-
-  /* Proof */
-  .proof-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-  @media (min-width: 768px) { .proof-grid { grid-template-columns: repeat(3, 1fr); } }
-  .proof {
-    text-align: center;
-    padding: var(--space-10) var(--space-6);
-    background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-  }
-  .proof-value {
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 700;
-    color: var(--color-primary);
-    letter-spacing: -0.02em;
-  }
-  .proof-label { margin-top: var(--space-2); color: var(--color-muted-foreground); font-size: 15px; }
-
-  /* Pricing */
-  .pricing {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-  @media (min-width: 768px) { .pricing { grid-template-columns: repeat(3, 1fr); } }
-  .plan {
-    background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    padding: var(--space-8);
-    display: flex; flex-direction: column;
-  }
-  .plan.popular {
-    border-color: var(--color-accent);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
-  }
-  .plan-header { margin-bottom: var(--space-6); }
-  .plan-name { font-size: 14px; font-weight: 600; color: var(--color-muted-foreground); letter-spacing: 0.06em; text-transform: uppercase; }
-  .plan-price { margin-top: var(--space-2); font-size: 36px; font-weight: 700; color: var(--color-primary); letter-spacing: -0.02em; }
-  .plan-price span { font-size: 16px; font-weight: 500; color: var(--color-muted-foreground); }
-  .plan-features { list-style: none; padding: 0; margin: var(--space-6) 0; flex: 1; }
-  .plan-features li { padding: 8px 0; font-size: 14px; color: var(--color-card-foreground); border-bottom: 1px solid var(--color-muted); }
-  .plan-features li:last-child { border-bottom: none; }
-  .plan .btn { width: 100%; margin-top: auto; }
-
-  /* CTA */
-  .cta-block {
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-    color: var(--color-on-primary);
-    border-radius: 12px;
-    padding: var(--space-16) var(--space-8);
-    text-align: center;
-  }
-  .cta-block h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 700; letter-spacing: -0.02em; }
-  .cta-block p { margin-top: var(--space-4); color: rgba(255,255,255,0.82); max-width: 680px; margin-left: auto; margin-right: auto; }
-  .cta-actions { margin-top: var(--space-8); display: inline-flex; flex-wrap: wrap; gap: var(--space-4); justify-content: center; }
-
-  /* Contact strip */
-  .contact-strip {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-    margin-top: var(--space-8);
-  }
-  @media (min-width: 768px) { .contact-strip { grid-template-columns: repeat(3, 1fr); } }
-  .contact-item {
-    background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    padding: var(--space-6);
-    text-align: center;
-  }
-  .contact-item strong { display: block; font-size: 14px; color: var(--color-muted-foreground); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
-  .contact-item a { display: block; margin-top: 6px; font-weight: 600; color: var(--color-primary); }
-  .contact-item a:hover { text-decoration: underline; }
-
-  /* Footer */
-  .site-footer {
-    border-top: 1px solid var(--color-border);
-    padding: var(--space-12) 0 var(--space-8);
-    background: var(--color-card);
-  }
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-  }
-  @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
-  .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-muted-foreground); margin-bottom: var(--space-4); }
-  .footer-col ul { list-style: none; padding: 0; }
-  .footer-col li + li { margin-top: 10px; }
-  .footer-col a { color: var(--color-card-foreground); font-size: 14px; font-weight: 500; }
-  .footer-col a:hover { color: var(--color-primary); text-decoration: underline; }
-  .footer-bottom {
-    margin-top: var(--space-10);
-    padding-top: var(--space-6);
-    border-top: 1px solid var(--color-border);
-    display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: space-between;
-    font-size: 13px; color: var(--color-muted-foreground);
-  }
-  .payment-badges { display: inline-flex; gap: var(--space-3); flex-wrap: wrap; }
-  .payment-badge {
-    background: var(--color-muted);
-    color: var(--color-muted-foreground);
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 600;
-  }
-
-  /* Utilities */
-  .text-center { text-align: center; }
-  .mt-4 { margin-top: var(--space-4); }
-  .mt-8 { margin-top: var(--space-8); }
-  .mt-12 { margin-top: var(--space-12); }
-  .mt-16 { margin-top: var(--space-16); }
-
-  /* Focus */
-  :focus-visible { outline: 3px solid var(--color-ring); outline-offset: 2px; border-radius: var(--radius); }
+  p{margin:0 0 1em; color:var(--ink-dim);}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  section{padding:96px 0;}
+  @media(max-width:720px){ section{padding:64px 0;} }
 
   /* Reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-    html { scroll-behavior: auto; }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
   }
 
-  /* Mobile nav */
-  .mobile-menu-btn { display: inline-flex; background: transparent; color: var(--color-primary); font-size: 22px; }
-  @media (min-width: 768px) { .mobile-menu-btn { display: none; } }
+  /* Focus visibility */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--mint);
+    outline-offset:3px;
+  }
+
+  /* ---------- Hex utility ---------- */
+  .hex{
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }
+
+  /* ---------- Nav ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(8,18,17,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px;
+    max-width:var(--maxw); margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1.05rem;}
+  .brand img{height:34px; width:auto;}
+  .navlinks{display:flex; align-items:center; gap:28px; font-size:.92rem; color:var(--ink-dim);}
+  .navlinks a:hover{color:var(--mint);}
+  .navlinks .event-pill{
+    background:var(--surface-2); border:1px solid var(--mint-dim); color:var(--mint);
+    padding:6px 14px; border-radius:999px; font-size:.82rem;
+  }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:12px 22px; border-radius:8px; font-weight:600; font-size:.92rem;
+    border:1px solid transparent; cursor:pointer; font-family:'Inter',sans-serif;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--mint); color:#04231E;}
+  .btn-primary:hover{background:#5CF3D2;}
+  .btn-ghost{border-color:var(--line); color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--mint-dim);}
+  .navcta{display:flex; align-items:center; gap:14px;}
+  .burger{display:none; background:none; border:none; color:var(--ink); font-size:1.5rem;}
+  @media(max-width:920px){
+    .navlinks{display:none;}
+    .burger{display:block;}
+  }
+  @media(max-width:560px){
+    .navcta .btn-primary{display:none;}
+    .brand{font-size:.92rem;}
+  }
+  .mobile-menu{
+    display:none; flex-direction:column; gap:2px; padding:8px 24px 20px;
+    border-top:1px solid var(--line);
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:12px 0; border-bottom:1px solid var(--line); color:var(--ink-dim);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:72px 0 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.05fr 1fr; gap:48px; align-items:center;
+  }
+  @media(max-width:960px){ .hero .wrap{grid-template-columns:1fr;} }
+  .eyebrow{
+    color:var(--mint); font-size:.85rem; font-weight:600; letter-spacing:.02em;
+    display:flex; align-items:center; gap:8px; margin-bottom:18px;
+  }
+  .eyebrow::before{content:''; width:20px; height:2px; background:var(--mint); display:inline-block;}
+  .hero h1{
+    font-size:clamp(2.1rem, 4.2vw, 3.4rem);
+    color:#fff;
+  }
+  .hero h1 .accent{color:var(--mint);}
+  .hero p.lead{font-size:1.08rem; max-width:46ch; margin-bottom:28px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;}
+  .hero-stats{display:flex; gap:32px; flex-wrap:wrap;}
+  .hero-stats div{min-width:90px;}
+  .hero-stats .num{font-family:'Space Grotesk',sans-serif; font-size:1.7rem; font-weight:700; color:#fff;}
+  .hero-stats .lbl{font-size:.8rem; color:var(--ink-faint);}
+  .hero-art{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 30px 80px -30px rgba(0,0,0,0.7);
+  }
+  .hero-art img{width:100%; height:100%; object-fit:cover;}
+  .hero-art::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, transparent 60%, rgba(8,18,17,0.55) 100%);
+    pointer-events:none;
+  }
+
+  /* ---------- Trust bar ---------- */
+  .trustbar{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    background:var(--bg-1);
+  }
+  .trustbar .wrap{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; padding:28px 24px;
+  }
+  .trustbar .item{text-align:center; flex:1; min-width:120px;}
+  .trustbar .num{font-family:'Space Grotesk',sans-serif; color:var(--mint); font-weight:700; font-size:1.5rem;}
+  .trustbar .lbl{font-size:.8rem; color:var(--ink-faint);}
+
+  /* ---------- Section headers ---------- */
+  .sec-head{max-width:640px; margin-bottom:48px;}
+  .sec-head .tag{color:var(--violet); font-weight:600; font-size:.85rem; margin-bottom:10px; display:block;}
+  .sec-head h2{font-size:clamp(1.6rem,3vw,2.3rem); color:#fff;}
+
+  /* ---------- Services ---------- */
+  .services-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  @media(max-width:960px){ .services-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:560px){ .services-grid{grid-template-columns:1fr;} }
+  .service-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:28px 24px;
+  }
+  .service-badge{
+    width:52px; height:56px; background:linear-gradient(145deg,var(--mint-dim),var(--surface-2));
+    display:flex; align-items:center; justify-content:center; margin-bottom:20px;
+    color:var(--mint); font-size:1.4rem;
+  }
+  .service-card h3{color:#fff; font-size:1.05rem;}
+  .service-card ul{margin:14px 0 0; padding:0; list-style:none; font-size:.88rem; color:var(--ink-dim);}
+  .service-card li{padding:5px 0 5px 18px; position:relative;}
+  .service-card li::before{content:'—'; position:absolute; left:0; color:var(--mint-dim);}
+
+  /* ---------- Method ---------- */
+  .method{background:var(--bg-1); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .method-steps{display:grid; grid-template-columns:repeat(3,1fr); gap:0;}
+  @media(max-width:800px){ .method-steps{grid-template-columns:1fr; gap:32px;} }
+  .method-step{padding:0 28px; position:relative;}
+  .method-step:not(:first-child){border-left:1px solid var(--line);}
+  @media(max-width:800px){ .method-step:not(:first-child){border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:32px;} }
+  .method-step .idx{font-family:'Space Grotesk',sans-serif; color:var(--mint); font-size:.85rem; font-weight:600; margin-bottom:14px; display:block;}
+  .method-step h3{color:#fff; font-size:1.1rem;}
+
+  /* ---------- Proof ---------- */
+  .proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media(max-width:760px){ .proof-grid{grid-template-columns:1fr;} }
+  .proof-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:32px 26px; text-align:center;
+  }
+  .proof-card .big{font-family:'Space Grotesk',sans-serif; font-size:2.4rem; font-weight:700; color:var(--mint);}
+  .proof-card .cap{font-size:.9rem; color:var(--ink-dim); margin-top:6px;}
+
+  /* ---------- Shop ---------- */
+  .shop{background:var(--bg);}
+  .shop-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  @media(max-width:900px){ .shop-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:560px){ .shop-grid{grid-template-columns:1fr;} }
+  .product{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+  .product-art{
+    aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;
+    background:radial-gradient(circle at 30% 20%, var(--surface-2), var(--bg-1));
+    font-size:2.6rem;
+    border-bottom:1px solid var(--line);
+  }
+  .product-body{padding:20px; display:flex; flex-direction:column; gap:10px; flex:1;}
+  .product-body h3{color:#fff; font-size:1rem; margin:0;}
+  .product-body p{font-size:.85rem; margin:0; flex:1;}
+  .product-foot{display:flex; align-items:center; justify-content:space-between; margin-top:8px;}
+  .price{font-family:'Space Grotesk',sans-serif; color:var(--mint); font-weight:700; font-size:1.15rem;}
+  .order-btn{
+    background:none; border:1px solid var(--mint-dim); color:var(--mint);
+    padding:9px 14px; border-radius:8px; font-size:.8rem; font-weight:600; cursor:pointer;
+  }
+  .order-btn:hover{background:var(--mint-dim);}
+  .shop-note{margin-top:28px; font-size:.85rem; color:var(--ink-faint);}
+
+  /* ---------- Blog ---------- */
+  .blog{background:var(--bg-1); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .blog-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  @media(max-width:900px){ .blog-grid{grid-template-columns:1fr;} }
+  .post{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:26px; cursor:pointer; display:flex; flex-direction:column; gap:12px;
+    transition:border-color .15s ease;
+  }
+  .post:hover{border-color:var(--mint-dim);}
+  .post .cat{color:var(--violet); font-size:.78rem; font-weight:600;}
+  .post h3{color:#fff; font-size:1.08rem;}
+  .post .meta{font-size:.78rem; color:var(--ink-faint); margin-top:auto;}
+  .post .read{color:var(--mint); font-size:.85rem; font-weight:600;}
+
+  /* Modal */
+  .modal-backdrop{
+    position:fixed; inset:0; background:rgba(4,10,9,0.8); backdrop-filter:blur(4px);
+    display:none; align-items:flex-start; justify-content:center; z-index:100; padding:40px 20px;
+    overflow-y:auto;
+  }
+  .modal-backdrop.open{display:flex;}
+  .modal{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    max-width:640px; width:100%; padding:36px; position:relative; margin-top:20px;
+  }
+  .modal-close{
+    position:absolute; top:18px; right:18px; background:none; border:none; color:var(--ink-dim);
+    font-size:1.4rem; cursor:pointer; line-height:1;
+  }
+  .modal .cat{color:var(--violet); font-size:.78rem; font-weight:600;}
+  .modal h3{color:#fff; font-size:1.4rem; margin-top:8px;}
+  .modal .meta{color:var(--ink-faint); font-size:.8rem; margin-bottom:20px;}
+  .modal-body p{color:var(--ink-dim); font-size:.95rem;}
+
+  /* ---------- Plans ---------- */
+  .plans-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media(max-width:900px){ .plans-grid{grid-template-columns:1fr;} }
+  .plan{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:32px 26px;
+    display:flex; flex-direction:column;
+  }
+  .plan.featured{border-color:var(--mint); position:relative; background:var(--surface-2);}
+  .plan.featured::before{
+    content:'MOST POPULAR'; position:absolute; top:-12px; left:26px;
+    background:var(--mint); color:#04231E; font-size:.68rem; font-weight:700;
+    padding:5px 10px; border-radius:6px; letter-spacing:.03em;
+  }
+  .plan h3{color:#fff; font-size:1.05rem;}
+  .plan .price{font-family:'Space Grotesk',sans-serif; font-size:2rem; color:var(--mint); margin:6px 0 20px;}
+  .plan .price span{font-size:.9rem; color:var(--ink-faint); font-family:'Inter',sans-serif;}
+  .plan ul{list-style:none; padding:0; margin:0 0 26px; flex:1;}
+  .plan li{padding:7px 0 7px 20px; position:relative; font-size:.88rem; color:var(--ink-dim);}
+  .plan li::before{content:'✓'; position:absolute; left:0; color:var(--mint);}
+  .addons{margin-top:28px; font-size:.85rem; color:var(--ink-faint); text-align:center;}
+
+  /* ---------- About / Founder ---------- */
+  .about .wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+  @media(max-width:900px){ .about .wrap{grid-template-columns:1fr;} }
+  .about-art{border-radius:20px; overflow:hidden; border:1px solid var(--line);}
+  .about-art img{width:100%;}
+  .about h2{color:#fff; font-size:clamp(1.6rem,3vw,2.2rem);}
+  .founder-name{font-family:'Space Grotesk',sans-serif; color:var(--mint); font-weight:600; margin-top:22px;}
+  .founder-title{color:var(--ink-faint); font-size:.88rem; margin-bottom:10px;}
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--bg-1); border-top:1px solid var(--line);}
+  .contact .wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:56px;}
+  @media(max-width:900px){ .contact .wrap{grid-template-columns:1fr;} }
+  .contact h2{color:#fff; font-size:clamp(1.6rem,3vw,2.2rem);}
+  .contact-ctas{display:flex; gap:14px; margin:26px 0; flex-wrap:wrap;}
+  .contact-badges{display:flex; gap:10px; font-size:.82rem; color:var(--ink-faint); flex-wrap:wrap;}
+  .contact-card{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:30px;}
+  .contact-row{display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px solid var(--line); font-size:.92rem;}
+  .contact-row:last-child{border-bottom:none;}
+  .contact-row .k{color:var(--ink-faint);}
+  .contact-row .v{color:#fff; text-align:right;}
+  .payments{display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .payments span{background:var(--surface-2); border:1px solid var(--line); padding:6px 12px; border-radius:8px; font-size:.78rem; color:var(--ink-dim);}
+
+  /* ---------- Footer ---------- */
+  footer{padding:56px 0 32px; border-top:1px solid var(--line);}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:40px;}
+  @media(max-width:760px){ .foot-grid{grid-template-columns:1fr 1fr;} }
+  .foot-grid h4{color:#fff; font-size:.85rem; margin-bottom:14px;}
+  .foot-grid a, .foot-grid p{display:block; color:var(--ink-faint); font-size:.86rem; margin-bottom:8px;}
+  .foot-grid a:hover{color:var(--mint);}
+  .foot-bottom{border-top:1px solid var(--line); padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.8rem; color:var(--ink-faint);}
 </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <a href="#" class="brand" aria-label="Bugdata Investments home">
-      <span class="brand-logo" aria-hidden="true">B</span>
-      <span>Bugdata Investments</span>
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <img src="assets/bugdata-logo.png" alt="Bugdata Investments logo">
+      Bugdata Investments
     </a>
-    <nav class="nav" aria-label="Primary">
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#method">Method</a></li>
-        <li><a href="#proof">Results</a></li>
-        <li><a href="#plans">Plans</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="/funnel/">Bulawayo Event — Oct 1, 2026</a></li>
-      </ul>
-      <a href="#session" class="btn btn-primary">Book Free Strategy Session</a>
-      <button class="mobile-menu-btn" aria-label="Open menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">☰</button>
+    <nav class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#shop">Shop</a>
+      <a href="#blog">Blog</a>
+      <a href="#plans">Plans</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="event-pill" href="funnel/">Bulawayo Event · Oct 1</a>
     </nav>
+    <div class="navcta">
+      <a class="btn btn-primary" href="#contact">Book Free Session</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#shop">Shop</a>
+    <a href="#blog">Blog</a>
+    <a href="#plans">Plans</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="funnel/">Bulawayo Event · Oct 1</a>
+    <a class="btn btn-primary" href="#contact" style="margin-top:14px; text-align:center;">Book Free Session</a>
   </div>
 </header>
 
-<main>
-  <section class="hero" aria-labelledby="hero-headline">
-    <div class="container hero-inner">
-      <h1 id="hero-headline">Get more traffic, leads & sales with AI automation + SEO.</h1>
-      <p class="lead">Bugdata Investments builds the digital systems that run your business 24/7 — so you stop trading time for money. Built for Zimbabwe, built to scale.</p>
+<div id="top"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">AI Automation · SEO · Hosting · Security</span>
+      <h1>Digital systems that run your business <span class="accent">while you sleep.</span></h1>
+      <p class="lead">Bugdata Investments builds the AI automation, search visibility, and secure hosting that Zimbabwean SMEs need to stop trading hours for income. Installed, optimized, and managed — done for you.</p>
       <div class="hero-ctas">
-        <a href="#session" class="btn btn-primary btn-lg">Book Your Free Strategy Session</a>
-        <a href="#services" class="btn btn-ghost btn-lg">See Our Services</a>
+        <a class="btn btn-primary" href="#contact">Book Your Free Strategy Session</a>
+        <a class="btn btn-ghost" href="#services">See Our Services</a>
       </div>
-      <div class="stats-row" aria-label="Key metrics">
-        <div class="stat"><div class="stat-value">1,000+</div><div class="stat-label">Websites Hosted</div></div>
-        <div class="stat"><div class="stat-value">24/7</div><div class="stat-label">AI Systems Live</div></div>
-        <div class="stat"><div class="stat-value">5★</div><div class="stat-label">Client Rating</div></div>
-        <div class="stat"><div class="stat-value">100%</div><div class="stat-label">Local Support</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="services" aria-labelledby="services-headline">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">What We Do</span>
-        <h2 id="services-headline">Four engines. One growth system.</h2>
-        <p>We model the proven playbook — built for the Zimbabwe & African market. Digital-first, done-for-you, monthly retainer.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🤖</div>
-          <h3>AI Automation</h3>
-          <p>The “AI Time Machine” — we audit, build, and ship new automations every month.</p>
-          <ul>
-            <li>Lead capture & follow-up bots</li>
-            <li>WhatsApp / Discord automation</li>
-            <li>Invoice & proposal generation</li>
-            <li>Monthly new-automation drops</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🔍</div>
-          <h3>SEO & Content</h3>
-          <p>Skyscraper link building + SEO-optimized content that ranks on Google.</p>
-          <ul>
-            <li>Technical SEO audit</li>
-            <li>SEO blog articles, 1500+ words</li>
-            <li>High-DR backlink outreach</li>
-            <li>Local Zimbabwe SEO</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🌐</div>
-          <h3>Website Hosting & No-Code Design</h3>
-          <p>Design & host unlimited fast websites — no code required.</p>
-          <ul>
-            <li>Unlimited hosting</li>
-            <li>Landing & funnel pages</li>
-            <li>Online shop setup</li>
-            <li>Free SSL & backups</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🔐</div>
-          <h3>Information Security</h3>
-          <p>Protect your business as you grow online with hardened systems.</p>
-          <ul>
-            <li>Security audit</li>
-            <li>Website & email hardening</li>
-            <li>Staff awareness training</li>
-            <li>Incident response plan</li>
-          </ul>
-        </article>
+      <div class="hero-stats">
+        <div><div class="num">1,000+</div><div class="lbl">Websites hosted</div></div>
+        <div><div class="num">24/7</div><div class="lbl">AI systems live</div></div>
+        <div><div class="num">5★</div><div class="lbl">Client rating</div></div>
+        <div><div class="num">100%</div><div class="lbl">Local support</div></div>
       </div>
     </div>
-  </section>
+    <div class="hero-art">
+      <img src="assets/hero-crop.jpg" alt="AI dashboard showing leads, conversions and automation results for a Zimbabwean SME, viewed above the Harare skyline">
+    </div>
+  </div>
+</section>
 
-  <section class="section" id="method" aria-labelledby="method-headline" style="background: linear-gradient(180deg, #ffffff, #f1f5f9);">
-    <div class="container">
-      <div class="section-header text-center" style="margin-left:auto;margin-right:auto;">
-        <span class="eyebrow" style="justify-content:center;">The AI Time Machine Method</span>
-        <h2 id="method-headline">Effortless. Scalable. Always on.</h2>
-        <p>Other agencies give you tools. We give you an entire AI-powered growth engine — installed, optimized and managed for you.</p>
+<div class="trustbar">
+  <div class="wrap">
+    <div class="item"><div class="num">1,245</div><div class="lbl">Avg. new leads / month, per client</div></div>
+    <div class="item"><div class="num">4.8×</div><div class="lbl">Average ROI on active plans</div></div>
+    <div class="item"><div class="num">120+</div><div class="lbl">Hours saved / month via automation</div></div>
+    <div class="item"><div class="num">28</div><div class="lbl">Workflows automated per client, avg.</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">What we do</span>
+      <h2>Four engines. One growth system.</h2>
+      <p>We install the proven playbook for the Zimbabwe & African market — digital-first, done-for-you, on a monthly retainer.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-badge hex">🤖</div>
+        <h3>AI Automation</h3>
+        <p style="font-size:.88rem;">We audit, build, and ship a new automation every month.</p>
+        <ul>
+          <li>Lead capture & follow-up bots</li>
+          <li>WhatsApp automation</li>
+          <li>Invoice & proposal generation</li>
+          <li>Monthly new-automation drops</li>
+        </ul>
       </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">STEP 1</div>
-          <h3>AI Time Audit</h3>
-          <p>We pinpoint exactly where AI can save you the most time and money in your current workflows.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">STEP 2</div>
-          <h3>AI System Build</h3>
-          <p>Month 1: your first high-impact automation. Month 2+: we keep layering in more, compounding results.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">STEP 3</div>
-          <h3>Hands-Free Implementation</h3>
-          <p>We install, optimize and manage it all. You just watch the time come back.</p>
-        </div>
+      <div class="service-card">
+        <div class="service-badge hex">🔍</div>
+        <h3>SEO & Content</h3>
+        <p style="font-size:.88rem;">Skyscraper link building plus content that actually ranks.</p>
+        <ul>
+          <li>Technical SEO audit</li>
+          <li>SEO blog articles, 1,500+ words</li>
+          <li>High-DR backlink outreach</li>
+          <li>Local Zimbabwe SEO</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-badge hex">🌐</div>
+        <h3>Hosting & No-Code Design</h3>
+        <p style="font-size:.88rem;">Fast websites, designed and hosted — no code required.</p>
+        <ul>
+          <li>Unlimited hosting</li>
+          <li>Landing & funnel pages</li>
+          <li>Online shop setup</li>
+          <li>Free SSL & backups</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-badge hex">🔐</div>
+        <h3>Information Security</h3>
+        <p style="font-size:.88rem;">Protect the business as it grows online.</p>
+        <ul>
+          <li>Security audit</li>
+          <li>Website & email hardening</li>
+          <li>Staff awareness training</li>
+          <li>Incident response plan</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section" id="proof" aria-labelledby="proof-headline">
-    <div class="container">
-      <div class="section-header text-center" style="margin-left:auto;margin-right:auto;">
-        <span class="eyebrow" style="justify-content:center;">Proof</span>
-        <h2 id="proof-headline">The math is simple.</h2>
-        <p>You’re leaving money on the table every day without systems. Here’s what changes when you switch them on.</p>
+<div class="method">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">How it works</span>
+      <h2>Effortless. Scalable. Always on.</h2>
+      <p>Other agencies hand you tools. We install an entire AI-powered growth engine and manage it for you.</p>
+    </div>
+    <div class="method-steps">
+      <div class="method-step">
+        <span class="idx">Step 1</span>
+        <h3>AI Time Audit</h3>
+        <p>We pinpoint exactly where AI can save the most time and money in your current workflow.</p>
       </div>
-      <div class="proof-grid">
-        <div class="proof">
-          <div class="proof-value">+127%</div>
-          <div class="proof-label">Traffic in 30 days — SEO content engine</div>
-        </div>
-        <div class="proof">
-          <div class="proof-value">20h</div>
-          <div class="proof-label">Saved / month per client via AI automation</div>
-        </div>
-        <div class="proof">
-          <div class="proof-value">3×</div>
-          <div class="proof-label">Backlink-driven ranking lift (Skyscraper)</div>
-        </div>
+      <div class="method-step">
+        <span class="idx">Step 2</span>
+        <h3>AI System Build</h3>
+        <p>Month one: your first high-impact automation. Month two onward: we keep layering in more.</p>
+      </div>
+      <div class="method-step">
+        <span class="idx">Step 3</span>
+        <h3>Hands-Free Implementation</h3>
+        <p>We install, optimize, and manage it all. You watch the time — and the leads — come back.</p>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <section class="section" id="plans" aria-labelledby="plans-headline">
-    <div class="container">
-      <div class="section-header text-center" style="margin-left:auto;margin-right:auto;">
-        <span class="eyebrow" style="justify-content:center;">Monthly Plans</span>
-        <h2 id="plans-headline">Pick your growth engine.</h2>
-        <p>No long contracts. Pause or scale anytime. Every plan includes your free strategy session.</p>
-      </div>
-      <div class="pricing">
-        <div class="plan">
-          <div class="plan-header">
-            <div class="plan-name">Starter</div>
-            <div class="plan-price">$197<span>/mo</span></div>
-          </div>
-          <ul class="plan-features">
-            <li>4 SEO-optimized articles</li>
-            <li>1 AI automation build</li>
-            <li>Website hosting, 1 site</li>
-            <li>Monthly report</li>
-          </ul>
-          <a href="#session" class="btn btn-secondary">Choose Starter</a>
-        </div>
-        <div class="plan popular">
-          <div class="plan-header">
-            <div class="plan-name">Growth</div>
-            <div class="plan-price">$397<span>/mo</span></div>
-          </div>
-          <ul class="plan-features">
-            <li>8 SEO-optimized articles</li>
-            <li>2 AI automations / month</li>
-            <li>Hosting up to 5 sites</li>
-            <li>Info-sec starter audit</li>
-            <li>Monthly strategy call</li>
-          </ul>
-          <a href="#session" class="btn btn-primary">Choose Growth</a>
-        </div>
-        <div class="plan">
-          <div class="plan-header">
-            <div class="plan-name">Scale</div>
-            <div class="plan-price">$797<span>/mo</span></div>
-          </div>
-          <ul class="plan-features">
-            <li>12 SEO-optimized articles</li>
-            <li>4 AI automations / month</li>
-            <li>Unlimited hosting</li>
-            <li>Full info-sec package</li>
-            <li>Quarterly 1:1 with our lead</li>
-          </ul>
-          <a href="#session" class="btn btn-secondary">Choose Scale</a>
-        </div>
-      </div>
-      <p class="text-center mt-4" style="color: var(--color-muted-foreground); font-size: 14px;">Add-ons: On-page SEO fix <strong>$150 one-time</strong> · High-DR backlink outreach <strong>from $98/link</strong> · Custom AI bot <strong>quote</strong>.</p>
+<section id="proof">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">Proof</span>
+      <h2>The math is simple.</h2>
+      <p>You're leaving money on the table every day without systems. Here's what changes when you switch them on.</p>
     </div>
-  </section>
-
-  <section class="section" id="session" aria-labelledby="session-headline">
-    <div class="container">
-      <div class="cta-block">
-        <h2 id="session-headline">Get a custom digital growth plan — built for your business.</h2>
-        <p>Hop on a 30-minute call with the Bugdata team. Walk away with a tailored SEO + AI automation blueprint you can use immediately. Free book included: “AI Automation for Zim Businesses: 10 Workflows”.</p>
-        <div class="cta-actions">
-          <a href="tel:+263782067259" class="btn btn-primary btn-lg">📞 Call +263 782 067 259</a>
-          <a href="https://wa.me/263782067259" class="btn btn-ghost btn-lg">WhatsApp Us</a>
-        </div>
-        <p style="margin-top: var(--space-6); font-size: 13px; opacity: 0.9;">✓ 100% Free &nbsp; ✓ No obligation &nbsp; ✓ Custom to you</p>
-      </div>
+    <div class="proof-grid">
+      <div class="proof-card"><div class="big">+127%</div><div class="cap">Traffic in 30 days — SEO content engine</div></div>
+      <div class="proof-card"><div class="big">20h</div><div class="cap">Saved / month per client via AI automation</div></div>
+      <div class="proof-card"><div class="big">3×</div><div class="cap">Backlink-driven ranking lift (Skyscraper method)</div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section" id="contact" aria-labelledby="contact-headline">
-    <div class="container">
-      <div class="section-header text-center" style="margin-left:auto;margin-right:auto;">
-        <span class="eyebrow" style="justify-content:center;">Let’s Talk</span>
-        <h2 id="contact-headline">Bridging ambition & the 21st-century economy.</h2>
+<section id="shop" class="shop">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">Bugdata Shop</span>
+      <h2>Branded stationery & office essentials.</h2>
+      <p>Kit out your team or hand out something better than a business card. Order any item below and we'll confirm stock, sizes, and delivery over WhatsApp.</p>
+    </div>
+    <div class="shop-grid" id="shopGrid"></div>
+    <p class="shop-note">Prices in USD. Bulk and branding discounts available for orders of 20+ units — ask us on WhatsApp.</p>
+  </div>
+</section>
+
+<section id="blog" class="blog">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">From the blog</span>
+      <h2>Growth notes for Zimbabwean businesses.</h2>
+      <p>Short, practical reads on automation, SEO, and running a safer digital business — no fluff.</p>
+    </div>
+    <div class="blog-grid" id="blogGrid"></div>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">Monthly plans</span>
+      <h2>Pick your growth engine.</h2>
+      <p>No long contracts. Pause or scale anytime. Every plan includes your free strategy session.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan">
+        <h3>Starter</h3>
+        <div class="price">$197<span>/mo</span></div>
+        <ul>
+          <li>4 SEO-optimized articles</li>
+          <li>1 AI automation build</li>
+          <li>Website hosting, 1 site</li>
+          <li>Monthly report</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Choose Starter</a>
       </div>
-      <div class="contact-strip">
-        <div class="contact-item">
-          <strong>Director & CEO</strong>
-          <span>Munyaradzi Hambakachere</span>
-        </div>
-        <div class="contact-item">
-          <strong>Phone</strong>
-          <a href="tel:+263782067259">+263 782 067 259</a>
-          <a href="tel:+263783689649">+263 783 689 649</a>
-        </div>
-        <div class="contact-item">
-          <strong>Email</strong>
-          <a href="mailto:bugdata.zw@gmail.com">bugdata.zw@gmail.com</a>
-        </div>
+      <div class="plan featured">
+        <h3>Growth</h3>
+        <div class="price">$397<span>/mo</span></div>
+        <ul>
+          <li>8 SEO-optimized articles</li>
+          <li>2 AI automations / month</li>
+          <li>Hosting up to 5 sites</li>
+          <li>Info-sec starter audit</li>
+          <li>Monthly strategy call</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Choose Growth</a>
       </div>
-      <div class="contact-strip" style="margin-top: var(--space-6);">
-        <div class="contact-item">
-          <strong>Website</strong>
-          <a href="https://bugdata.co.zw" target="_blank" rel="noopener">www.bugdata.co.zw</a>
-        </div>
-        <div class="contact-item">
-          <strong>Location</strong>
-          <span>Harare, Zimbabwe 🇿🇼</span>
-        </div>
-        <div class="contact-item">
-          <strong>Payments Accepted</strong>
-          <div class="payment-badges" style="justify-content:center;">
-            <span class="payment-badge">EcoCash</span>
-            <span class="payment-badge">OneMoney</span>
-            <span class="payment-badge">ZIPIT</span>
-          </div>
-        </div>
+      <div class="plan">
+        <h3>Scale</h3>
+        <div class="price">$797<span>/mo</span></div>
+        <ul>
+          <li>12 SEO-optimized articles</li>
+          <li>4 AI automations / month</li>
+          <li>Unlimited hosting</li>
+          <li>Full info-sec package</li>
+          <li>Quarterly 1:1 with our lead</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Choose Scale</a>
       </div>
     </div>
-  </section>
-</main>
+    <p class="addons">Add-ons: On-page SEO fix <strong style="color:#fff;">$150 one-time</strong> · High-DR backlink outreach <strong style="color:#fff;">from $98/link</strong> · Custom AI bot <strong style="color:#fff;">quote</strong>.</p>
+  </div>
+</section>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <div class="brand" style="margin-bottom: var(--space-4);">
-          <span class="brand-logo" aria-hidden="true">B</span>
-          <span>Bugdata Investments</span>
-        </div>
-        <p style="color: var(--color-muted-foreground); font-size: 14px; max-width: 320px;">Zimbabwe’s digital growth partner for AI automation, SEO, and information security.</p>
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="about-art">
+      <img src="assets/about-crop.jpg" alt="Munyaradzi Hambakachere, Director and CEO of Bugdata Investments">
+    </div>
+    <div>
+      <span class="eyebrow">Who's behind it</span>
+      <h2>We invest in smart solutions. Data. Automation. Growth.</h2>
+      <p>Bugdata Investments exists to bridge the gap between ambition and the 21st-century economy. We believe a business in Harare or Bulawayo deserves the same automation and search visibility as one in Cape Town or London — priced and packaged for the local market.</p>
+      <p>Every engagement starts with a free strategy session, not a sales pitch: we look at your real workflow, then show you exactly where AI and search can save you time and win you customers.</p>
+      <div class="founder-name">Munyaradzi Hambakachere</div>
+      <div class="founder-title">Director & CEO, Bugdata Investments</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Let's talk</span>
+      <h2>Get a custom digital growth plan — built for your business.</h2>
+      <p>Hop on a 30-minute call with the Bugdata team. Walk away with a tailored SEO + AI automation blueprint you can use immediately, plus a free copy of "AI Automation for Zim Businesses: 10 Workflows".</p>
+      <div class="contact-ctas">
+        <a class="btn btn-primary" href="tel:+263782067259">📞 Call +263 782 067 259</a>
+        <a class="btn btn-ghost" href="https://wa.me/263782067259" target="_blank" rel="noopener">WhatsApp Us</a>
       </div>
-      <div class="footer-col">
+      <div class="contact-badges">
+        <span>✓ 100% Free</span><span>✓ No obligation</span><span>✓ Custom to you</span>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-row"><span class="k">Director & CEO</span><span class="v">Munyaradzi Hambakachere</span></div>
+      <div class="contact-row"><span class="k">Phone</span><span class="v">+263 782 067 259<br>+263 783 689 649</span></div>
+      <div class="contact-row"><span class="k">Email</span><span class="v">bugdata.zw@gmail.com</span></div>
+      <div class="contact-row"><span class="k">Website</span><span class="v">www.bugdata.co.zw</span></div>
+      <div class="contact-row"><span class="k">Location</span><span class="v">Harare, Zimbabwe 🇿🇼</span></div>
+      <div class="payments">
+        <span>EcoCash</span><span>OneMoney</span><span>ZIPIT</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:12px;">
+          <img src="assets/bugdata-logo.png" alt="Bugdata Investments logo" style="height:30px;">
+          Bugdata Investments
+        </a>
+        <p>Zimbabwe's digital growth partner for AI automation, SEO, hosting, and information security.</p>
+      </div>
+      <div>
         <h4>Services</h4>
-        <ul>
-          <li><a href="#services">AI Automation</a></li>
-          <li><a href="#services">SEO & Content</a></li>
-          <li><a href="#services">Website Hosting</a></li>
-          <li><a href="#services">Information Security</a></li>
-        </ul>
+        <a href="#services">AI Automation</a>
+        <a href="#services">SEO & Content</a>
+        <a href="#services">Website Hosting</a>
+        <a href="#services">Information Security</a>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Company</h4>
-        <ul>
-          <li><a href="#method">Method</a></li>
-          <li><a href="#proof">Results</a></li>
-          <li><a href="#plans">Plans</a></li>
-          <li><a href="#contact">Contact</a></li>
-        <li><a href="/funnel/">Bulawayo Event — Oct 1, 2026</a></li>
-        </ul>
+        <a href="#shop">Shop</a>
+        <a href="#blog">Blog</a>
+        <a href="#plans">Plans</a>
+        <a href="#about">About</a>
+        <a href="funnel/">Bulawayo Event — Oct 1, 2026</a>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:+263782067259">+263 782 067 259</a></li>
-          <li><a href="mailto:bugdata.zw@gmail.com">bugdata.zw@gmail.com</a></li>
-          <li><a href="https://bugdata.co.zw" target="_blank" rel="noopener">www.bugdata.co.zw</a></li>
-        </ul>
+        <a href="tel:+263782067259">+263 782 067 259</a>
+        <a href="mailto:bugdata.zw@gmail.com">bugdata.zw@gmail.com</a>
+        <a href="https://bugdata.co.zw">www.bugdata.co.zw</a>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="foot-bottom">
       <span>© <span id="year"></span> Bugdata Investments · Bridging ambition & the 21st-century economy.</span>
-      <span class="payment-badges">
-        <span class="payment-badge">EcoCash</span>
-        <span class="payment-badge">OneMoney</span>
-        <span class="payment-badge">ZIPIT</span>
-      </span>
+      <span>EcoCash · OneMoney · ZIPIT</span>
     </div>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <span class="cat" id="modalCat"></span>
+    <h3 id="modalTitle"></h3>
+    <div class="meta" id="modalMeta"></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Mobile menu
+const burger = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+// ---------- Shop ----------
+const products = [
+  {name:'Branded A5 Notebooks', desc:'Hardcover, 120 pages, foil-stamped logo. Great for meetings and client gifting.', price:8, icon:'📓'},
+  {name:'Bugdata Pen 5-Pack', desc:'Smooth gel pens with your business name printed along the barrel.', price:6, icon:'✒️'},
+  {name:'Branded Polo T-Shirts', desc:'Embroidered logo, sizes S–XXL. Popular for staff uniforms and events.', price:15, icon:'👕'},
+  {name:'32GB Flash Drives', desc:'Custom-printed USB drives — handy for proposals, portfolios, and gifting.', price:12, icon:'💾'},
+  {name:'2027 Desk Calendars', desc:'12-month standing calendar, printed with your brand and contact details.', price:10, icon:'📅'},
+  {name:'Padded Laptop Sleeves', desc:'13"–15" neoprene sleeve with embroidered logo, water-resistant.', price:18, icon:'💻'}
+];
+const shopGrid = document.getElementById('shopGrid');
+products.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'product';
+  card.innerHTML = `
+    <div class="product-art">${p.icon}</div>
+    <div class="product-body">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+      <div class="product-foot">
+        <span class="price">$${p.price}</span>
+        <button class="order-btn">Order on WhatsApp</button>
+      </div>
+    </div>`;
+  card.querySelector('.order-btn').addEventListener('click', () => {
+    const msg = encodeURIComponent(`Hi Bugdata! I'd like to order: ${p.name} ($${p.price}).`);
+    window.open(`https://wa.me/263782067259?text=${msg}`, '_blank');
+  });
+  shopGrid.appendChild(card);
+});
+
+// ---------- Blog ----------
+const posts = [
+  {
+    cat:'Automation', title:'5 WhatsApp Automations Every Zimbabwean SME Should Have', date:'August 2026 · 4 min read',
+    body:`<p>Most small businesses in Zimbabwe already run their sales through WhatsApp — the problem is that every reply, quote, and follow-up is manual. That's hours lost every week, and leads going cold overnight.</p>
+    <p>Here are five automations we install most often: an instant welcome reply that captures a lead's name and need, an auto-quote sender for standard products, a follow-up nudge for anyone who goes quiet after 48 hours, an order-status responder so customers stop asking "where's my delivery", and a review request sent the day after a sale closes.</p>
+    <p>None of these need a developer on staff. They run in the background once, and keep working every day after.</p>`
+  },
+  {
+    cat:'SEO', title:'Why Local SEO Matters More Than Ever in 2026', date:'July 2026 · 5 min read',
+    body:`<p>Search behaviour in Zimbabwe has shifted: more customers now search "near me" or by suburb before they call anyone. If your business isn't showing up for "electrician Avondale" or "caterer Bulawayo", you're invisible at the exact moment someone is ready to buy.</p>
+    <p>Local SEO isn't about tricking Google — it's the unglamorous basics done properly: a complete Google Business Profile, consistent business details across directories, genuinely useful content answering the questions your customers actually ask, and a handful of relevant local backlinks.</p>
+    <p>Businesses that get this right typically see a steady climb in enquiries over 60–90 days, not an overnight spike — and it keeps compounding as long as the content keeps going up.</p>`
+  },
+  {
+    cat:'Security', title:'Information Security Basics Every Small Business Owner Should Know', date:'June 2026 · 4 min read',
+    body:`<p>Most small business breaches aren't sophisticated hacks — they're a shared password, an unlocked admin panel, or a staff member clicking a convincing fake invoice. The good news: the fixes are simple and cheap.</p>
+    <p>Start with unique passwords and two-factor authentication on your email and website admin, a written (even one-page) plan for what to do if an account is compromised, basic staff awareness of phishing red flags, and regular backups stored somewhere other than the same device.</p>
+    <p>None of this requires a security team. It requires doing the basics once, and reviewing them twice a year.</p>`
+  },
+  {
+    cat:'Case Study', title:'How One Harare Retailer Cut Response Time by 80%', date:'May 2026 · 3 min read',
+    body:`<p>A Harare-based homeware retailer came to us answering every WhatsApp enquiry manually — often hours later, after the customer had already bought elsewhere.</p>
+    <p>We installed an instant-response bot that greets every new enquiry, shares current stock and pricing for their top 20 products, and routes anything unusual straight to a staff member's phone. Average first-response time dropped from 3 hours to under 4 minutes.</p>
+    <p>Within a month, the team reported noticeably fewer "sorry, sold out already" conversations — because leads were being engaged while they were still warm, not after closing time.</p>`
+  }
+];
+const blogGrid = document.getElementById('blogGrid');
+posts.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'post';
+  card.innerHTML = `
+    <span class="cat">${p.cat}</span>
+    <h3>${p.title}</h3>
+    <div class="meta">${p.date}</div>
+    <span class="read">Read article →</span>`;
+  card.addEventListener('click', () => openModal(p));
+  blogGrid.appendChild(card);
+});
+
+const modalBackdrop = document.getElementById('modalBackdrop');
+function openModal(p){
+  document.getElementById('modalCat').textContent = p.cat;
+  document.getElementById('modalTitle').textContent = p.title;
+  document.getElementById('modalMeta').textContent = p.date;
+  document.getElementById('modalBody').innerHTML = p.body;
+  modalBackdrop.classList.add('open');
+}
+document.getElementById('modalClose').addEventListener('click', () => modalBackdrop.classList.remove('open'));
+modalBackdrop.addEventListener('click', (e) => { if(e.target === modalBackdrop) modalBackdrop.classList.remove('open'); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') modalBackdrop.classList.remove('open'); });
+</script>
 </body>
 </html>
