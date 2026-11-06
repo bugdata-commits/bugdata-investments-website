@@ -1,0 +1,10 @@
+{
+  "name": "Bugdata Investments",
+  "short_name": "Bugdata",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#081211",
+  "theme_color": "#081211",
+  "description": "Managed AI automation, SEO and digital growth systems for Zimbabwean SMEs.",
+  "icons": [{"src":"/assets/bugdata-logo.png","sizes":"270x293","type":"image/png","purpose":"any maskable"}]
+}
